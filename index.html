@@ -42,8 +42,10 @@
 		<button class="action action--open" aria-label="Open Menu"><span class="icon icon--menu"></span></button>
 		<nav id="ml-menu" class="menu">
 			<button class="action action--close" aria-label="Close Menu"><span class="icon icon--cross"></span></button>
+			
 			<div class="menu__wrap">
 				<ul data-menu="main" class="menu__level" tabindex="-1" role="menu" aria-label="All">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Home</a></li>
 					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-1" aria-owns="submenu-1" href="#">Vegetables</a></li>
 					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-2" aria-owns="submenu-2" href="#">Fruits</a></li>
 					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-3" aria-owns="submenu-3" href="#">Grains</a></li>
@@ -159,9 +161,36 @@
 			classie.add(gridWrapper, 'content--loading');
 			setTimeout(function() {
 				classie.remove(gridWrapper, 'content--loading');
-				gridWrapper.innerHTML = '<ul class="products">' + dummyData[itemName] + '<ul>';
+				loadHtml(gridWrapper, "/about.html");
+				//gridWrapper.innerHTML = '<ul class="products">' + dummyData[itemName] + '<ul>';
 			}, 700);
 		}
+
+		const loadHtml = function(parentElementId, filePath) {
+		const init = {
+			method : "GET",
+			headers : { "Content-Type" : "text/html" },
+			mode : "cors",
+			cache : "default"
+		};
+		const req = new Request(filePath, init);
+		fetch(req)
+			.then(function(response) {
+				return response.text();
+			})
+			.then(function(body) {
+				// Replace `#` char in case the function gets called `querySelector` or jQuery style
+				// if (parentElementId.startsWith("#")) {
+				// 	parentElementId.replace("#", "");
+				// }
+				//document.getElementById(parentElementId).innerHTML = body;
+				gridWrapper.innerHTML = body;
+
+			});
+	}
+
+
+
 	})();
 	</script>
 </body>
