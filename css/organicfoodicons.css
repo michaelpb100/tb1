@@ -39,7 +39,7 @@
 }
 .foodicon--gear::before {
 	/* content: "\e91d"; */
-	content: url("../img/gear31.jpg");
+	content: url("../img/gear.svg");
 	/* content:"rsr"; */
 	/* height: 20; */
 	/* width: 20; */
