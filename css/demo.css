@@ -17,6 +17,18 @@
 	box-sizing: border-box;
 }
 
+.paragraph_Main{
+	margin: 30px;
+}
+
+.h1{
+	margin: 30px;
+}
+
+.imageContainer{
+	margin: 30px;
+}
+
 
 /* Helper classes */
 
@@ -65,6 +77,7 @@ a:hover {
 	display: -webkit-flex;
 	display: flex;
 }
+
 
 .bp-header__main {
 	margin: 0 0 0 auto;
