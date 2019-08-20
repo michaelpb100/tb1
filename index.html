@@ -30,7 +30,7 @@
 			</div>
 			<div class="bp-header__main">
 				<span class="bp-header__present">Tom Brooks</span>
-				<h1 class="bp-header__title">Engineering  </h1>
+				<h1 class="bp-header__title">Engineering </h1>
 				<!-- <nav class="bp-nav">
 					<a class="bp-nav__item bp-icon bp-icon--prev" href="http://tympanus.net/Blueprints/PageStackNavigation/" data-info="previous Blueprint"><span>Previous Blueprint</span></a>
 					<a class="bp-nav__item bp-icon bp-icon--drop" href="http://tympanus.net/codrops/?p=25521" data-info="back to the Codrops article"><span>back to the Codrops article</span></a>
@@ -41,19 +41,22 @@
 		<button class="action action--open" aria-label="Open Menu"><span class="icon icon--menu"></span></button>
 		<nav id="ml-menu" class="menu">
 			<button class="action action--close" aria-label="Close Menu"><span class="icon icon--cross"></span></button>
-			
+
 			<div class="menu__wrap">
 				<ul data-menu="main" class="menu__level" tabindex="-1" role="menu" aria-label="All">
 					<li class="menu__item" role="menuitem"><a class="menu__link" id="home" href="#">What we do</a></li>
 					<li class="menu__item" role="menuitem"><a class="menu__link" id="about" href="#">Services</a></li>
 					<li class="menu__item" role="menuitem"><a class="menu__link" id="team" href="#">Team</a></li>
 					<li class="menu__item" role="menuitem"><a class="menu__link" id="contact" href="#">Contact</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-4" aria-owns="submenu-4" href="#">Work</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-4"
+							aria-owns="submenu-4" href="#">Work</a></li>
 				</ul>
 				<!-- Submenu 4 -->
-				<ul data-menu="submenu-4" id="submenu-4" class="menu__level" tabindex="-1" role="menu" aria-label="Previous Jobs">
-						<li class="menu__item" role="menuitem"><a class="menu__link" id="job1" href="#">Big Job</a></li>
-						<li class="menu__item" role="menuitem"><a class="menu__link" id="shedBuild" href="#">Workshop Build</a></li>
+				<ul data-menu="submenu-4" id="submenu-4" class="menu__level" tabindex="-1" role="menu"
+					aria-label="Previous Jobs">
+					<li class="menu__item" role="menuitem"><a class="menu__link" id="job1" href="#">Big Job</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" id="shedBuild" href="#">Workshop
+							Build</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -67,88 +70,86 @@
 	<script src="js/dummydata.js"></script>
 	<script src="js/main.js"></script>
 	<script>
-	(
-	function() {
-		var menuEl = document.getElementById('ml-menu'),
-			mlmenu = new MLMenu(menuEl, {
-				// breadcrumbsCtrl : true, // show breadcrumbs
-				// initialBreadcrumb : 'all', // initial breadcrumb text
-				backCtrl : false, // show back button
-				// itemsDelayInterval : 60, // delay between each menu item sliding animation
-				onItemClick: loadDummyData // callback: item that doesn´t have a submenu gets clicked - onItemClick([event], [inner HTML of the clicked item])
-			});
+		(
 
-		window.onload = function() {
-			loadDummyData(null, null);
-		};	
+			function () {
+				var menuEl = document.getElementById('ml-menu'),
+					mlmenu = new MLMenu(menuEl, {
+						// breadcrumbsCtrl : true, // show breadcrumbs
+						// initialBreadcrumb : 'all', // initial breadcrumb text
+						backCtrl: false, // show back button
+						// itemsDelayInterval : 60, // delay between each menu item sliding animation
+						onItemClick: loadDummyData // callback: item that doesn´t have a submenu gets clicked - onItemClick([event], [inner HTML of the clicked item])
+					});
 
-		// mobile menu toggle
-		var openMenuCtrl = document.querySelector('.action--open'),
-			closeMenuCtrl = document.querySelector('.action--close');
+				window.onload = function () {
+					loadDummyData(null, null);
+				};
 
-		openMenuCtrl.addEventListener('click', openMenu);
-		closeMenuCtrl.addEventListener('click', closeMenu);
+				// mobile menu toggle
+				var openMenuCtrl = document.querySelector('.action--open'),
+					closeMenuCtrl = document.querySelector('.action--close');
 
-		function openMenu() {
-			classie.add(menuEl, 'menu--open');
-			closeMenuCtrl.focus();
-		}
+				openMenuCtrl.addEventListener('click', openMenu);
+				closeMenuCtrl.addEventListener('click', closeMenu);
 
-		function closeMenu() {
-			classie.remove(menuEl, 'menu--open');
-			openMenuCtrl.focus();
-		}
+				function openMenu() {
+					classie.add(menuEl, 'menu--open');
+					closeMenuCtrl.focus();
+				}
 
-		function copyToClipboard(){
-			
-		}
-		// simulate grid content loading
-		var gridWrapper = document.querySelector('.content');
+				function closeMenu() {
+					classie.remove(menuEl, 'menu--open');
+					openMenuCtrl.focus();
+				}
 
-		function loadDummyData(ev, itemName) {
-			if(ev != null){
-				ev.preventDefault();
-				var pageToLoad = "/" + ev.srcElement.id + ".html";
-			}
-			else{
-				var pageToLoad = "/home.html";
-			}
-			closeMenu();
-			gridWrapper.innerHTML = '';
-			classie.add(gridWrapper, 'content--loading');
-			setTimeout(function() {
-				classie.remove(gridWrapper, 'content--loading');
-				loadHtml(gridWrapper, pageToLoad);
-				//gridWrapper.innerHTML = '<ul class="products">' + dummyData[itemName] + '<ul>';
-			}, 700);
-		}
+				// simulate grid content loading
+				var gridWrapper = document.querySelector('.content');
 
-		const loadHtml = function(parentElementId, filePath) {
-		const init = {
-			method : "GET",
-			headers : { "Content-Type" : "text/html" },
-			mode : "cors",
-			cache : "default"
-		};
-		const req = new Request(filePath, init);
-		fetch(req)
-			.then(function(response) {
-				return response.text();
-			})
-			.then(function(body) {
-				// Replace `#` char in case the function gets called `querySelector` or jQuery style
-				// if (parentElementId.startsWith("#")) {
-				// 	parentElementId.replace("#", "");
-				// }
-				//document.getElementById(parentElementId).innerHTML = body;
-				gridWrapper.innerHTML = body;
+				function loadDummyData(ev, itemName) {
+					if (ev != null) {
+						ev.preventDefault();
+						var pageToLoad = "/" + ev.srcElement.id + ".html";
+					}
+					else {
+						var pageToLoad = "/home.html";
+					}
+					closeMenu();
+					gridWrapper.innerHTML = '';
+					classie.add(gridWrapper, 'content--loading');
+					setTimeout(function () {
+						classie.remove(gridWrapper, 'content--loading');
+						loadHtml(gridWrapper, pageToLoad);
+						//gridWrapper.innerHTML = '<ul class="products">' + dummyData[itemName] + '<ul>';
+					}, 700);
+				}
 
-			});
-	}
+				const loadHtml = function (parentElementId, filePath) {
+					const init = {
+						method: "GET",
+						headers: { "Content-Type": "text/html" },
+						mode: "cors",
+						cache: "default"
+					};
+					const req = new Request(filePath, init);
+					fetch(req)
+						.then(function (response) {
+							return response.text();
+						})
+						.then(function (body) {
+							// Replace `#` char in case the function gets called `querySelector` or jQuery style
+							// if (parentElementId.startsWith("#")) {
+							// 	parentElementId.replace("#", "");
+							// }
+							//document.getElementById(parentElementId).innerHTML = body;
+							gridWrapper.innerHTML = body;
+
+						});
+				}
 
 
 
-	})();
+			})();
 	</script>
 </body>
 
