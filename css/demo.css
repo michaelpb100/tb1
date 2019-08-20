@@ -8,6 +8,11 @@
 	src: url('../fonts/bpicons/bpicons.eot?#iefix') format('embedded-opentype'), url('../fonts/bpicons/bpicons.woff') format('woff'), url('../fonts/bpicons/bpicons.ttf') format('truetype'), url('../fonts/bpicons/bpicons.svg#bpicons') format('svg');
 }/* Made with http://icomoon.io/ */
 
+:root {
+	--main-bg-color: #2a2b30;
+  }
+
+
 
 /* Resets */
 
@@ -17,8 +22,22 @@
 	box-sizing: border-box;
 }
 
+.hr {
+	border:none;
+	border-top:2px dotted var(--main-bg-color);
+	color:#fff;
+	background-color:#fff;
+	height:.5px;
+	margin: 0 auto;
+	width:75%;
+  }
+
 .paragraph_Main{
 	margin: 30px;
+}
+
+.mainList{
+	margin-left: 100px;
 }
 
 .h1{
@@ -50,7 +69,7 @@ body {
 	overflow: hidden;
 	margin: 0;
 	color: #cecece;
-	background: #2a2b30;
+	background: var(--main-bg-color);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -316,5 +335,8 @@ body #cdawrap a:hover.carbon-poweredby {
 	.container {
 		height: auto;
 		overflow: auto;
+	}
+	.mainList{
+		margin-left: 30px;
 	}
 }
