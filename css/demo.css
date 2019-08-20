@@ -9,6 +9,7 @@
 }/* Made with http://icomoon.io/ */
 
 
+
 /* Resets */
 
 *,
@@ -19,6 +20,10 @@
 
 .paragraph_Main{
 	margin: 30px;
+}
+
+.mainList{
+	margin-left: 100px;
 }
 
 .h1{
