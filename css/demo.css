@@ -322,4 +322,7 @@ body #cdawrap a:hover.carbon-poweredby {
 		height: auto;
 		overflow: auto;
 	}
+	.mainList{
+		margin-left: 30px;
+	}
 }
