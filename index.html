@@ -136,7 +136,15 @@
 						mode: "cors",
 						cache: "default"
 					};
-					const req = new Request(filePath, init);
+					var baseURI = parentElementId.baseURI;
+					if(baseURI.indexOf("index.html"))
+					{
+						baseURI = baseURI.replace("index.html", "");
+					}
+
+					const fullyQualifiedPathToPage = baseURI + filePath;
+
+					const req = new Request(fullyQualifiedPathToPage, init);
 					fetch(req)
 						.then(function (response) {
 							return response.text();
