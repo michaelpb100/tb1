@@ -32,6 +32,12 @@
 	width:75%;
   }
 
+
+.carousel-resizable{
+	margin-left: 100px;
+	margin-right: 100px;
+  }
+
 .paragraph_Main{
 	margin: 30px;
 }
@@ -84,7 +90,7 @@ a:hover {
 	color: #ddd;
 }
 
-.container {
+.containerDemo {
 	overflow-y: auto;
 	height: 100vh;
 }
@@ -332,11 +338,15 @@ body #cdawrap a:hover.carbon-poweredby {
 		margin: 0;
 	}
 	body,
-	.container {
+	.containerDemo {
 		height: auto;
 		overflow: auto;
 	}
 	.mainList{
 		margin-left: 30px;
+	}
+	.carousel-resizable{
+		margin-left: 10px;
+		margin-right: 10px;
 	}
 }
