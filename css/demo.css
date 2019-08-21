@@ -12,8 +12,6 @@
 	--main-bg-color: #2a2b30;
   }
 
-
-
 /* Resets */
 
 *,
@@ -31,6 +29,10 @@
 	margin: 0 auto;
 	width:75%;
   }
+ 
+.stretchImage{
+	position: absolute;	
+}
 
 .carousel-resizable{
 	margin-left: 300px;
@@ -39,6 +41,16 @@
 
 .paragraph_Main{
 	margin: 30px;
+}
+
+.withBackgroundImage{
+	color: black;
+	background-image: url("../img/background.webp");
+	height: 90vh;
+}
+
+.withWhiteText{
+	color: white;
 }
 
 .mainList{
