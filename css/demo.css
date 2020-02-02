@@ -20,6 +20,10 @@
 	box-sizing: border-box;
 }
 
+.a{
+	color: cadetblue;
+}
+
 .hr {
 	border:none;
 	border-top:2px dotted var(--main-bg-color);
