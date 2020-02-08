@@ -41,6 +41,30 @@
 
 /* Menu styles */
 
+.mapButton{
+	height: 20px;
+	width: 20px;
+	margin: 0px;
+	padding: 0px;
+	background: none;
+	border: 0px;
+	outline: none;
+	/* border: none; */
+}
+/* .mapButton:focus { 
+	outline: none;
+
+} */
+
+.mapImage:hover{
+	/* border: 2px black solid; */
+	opacity: .5;
+	/* margin: 0px;
+	padding: 0px; */
+	/* background-color: transparent; */
+	/* border: none; */
+}
+
 .menu {
 	position: fixed;
 	top: 150px;
