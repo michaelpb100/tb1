@@ -11,6 +11,7 @@
 :root {
 	/* --main-bg-color: #2a2b30; */
 	--main-bg-color: #ffffff;
+	--text-font-color: #093145;
   }
 
 /* Resets */
@@ -108,7 +109,8 @@ body {
 	overflow: hidden;
 	margin: 0;
 	/* color: #cecece; */
-	color: black;
+	/* color: black; */
+	color: var(--text-font-color);
 	background: var(--main-bg-color);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -277,6 +279,28 @@ a:hover {
 	content: '\e004';
 }
 
+.divider{
+	border-bottom: 1px solid lightgray;
+	margin-bottom: 10px;
+}
+
+.serviceItem::before{
+	content: "";
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 8px;
+    left: 0;
+    background-image: url(/img/bullet.svg);
+}
+
+.serviceItem {
+    position: relative;
+	padding: 8px 32px;
+	list-style: none;
+    padding-right: 0;
+    line-height: 1.5;
+}
 
 .contactBar{
 	/* background-color: #2C2C2C; */
