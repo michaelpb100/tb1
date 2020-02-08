@@ -263,6 +263,30 @@ a:hover {
 	content: '\e004';
 }
 
+
+.contactBar{
+	/* background-color: #2C2C2C; */
+	/* background-color: #3b3d4a; */
+	background-color: #3b3d4a;
+	width: 100%;
+	z-index: 30;
+	text-align: center;
+	color: blanchedalmond;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	/* display: inline; */
+}
+
+.phone,
+.mail{
+	display: inline;
+	margin-right: 10px;
+	font-size: 12px;
+}
+
+.contactIcon{
+	margin-left: 5px;
+}
 .dummy-logo {
 	position: fixed;
 	top: 0;
