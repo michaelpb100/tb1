@@ -9,7 +9,8 @@
 }/* Made with http://icomoon.io/ */
 
 :root {
-	--main-bg-color: #2a2b30;
+	/* --main-bg-color: #2a2b30; */
+	--main-bg-color: #ffffff;
   }
 
 /* Resets */
@@ -28,7 +29,7 @@
 	border:none;
 	border-top:2px dotted var(--main-bg-color);
 	color:#fff;
-	background-color:#fff;
+	background: var(--main-bg-color);
 	height:.5px;
 	margin: 0 auto;
 	width:75%;
@@ -89,7 +90,8 @@ body {
 	font-family: 'Avenir Next', Avenir, 'Helvetica Neue', 'Lato', 'Segoe UI', Helvetica, Arial, sans-serif;
 	overflow: hidden;
 	margin: 0;
-	color: #cecece;
+	/* color: #cecece; */
+	color: black;
 	background: var(--main-bg-color);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -132,7 +134,7 @@ a:hover {
 	margin: 0.25em 0 0;
 }
 .bp-header__title::after {
-	content: url("../img/gearSmall.svg")
+	content: url("../img/tom-brooks-logo.jpg")
 }
 
 .bp-header__present {
@@ -267,7 +269,7 @@ a:hover {
 	padding: 1em 0 0 0;
 	text-align: center;
 	color: #3b3d4a;
-	background: #1c1d22;
+	background: none;
 }
 
 .dummy-icon {
@@ -296,14 +298,6 @@ a:hover {
 	text-align: center;
 }
 
-.product {
-	display: inline-block;
-	width: 200px;
-	height: 200px;
-	margin: 10px;
-	border-radius: 5px;
-	background: #1c1d22;
-}
 
 .product .foodicon {
 	font-size: 4em;

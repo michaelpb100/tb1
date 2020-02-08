@@ -9,7 +9,6 @@
 }
 
 .clickable:active {
-	/* background-color: #0000FF; */
 	opacity: .5;
   }
 
@@ -48,7 +47,7 @@
 	left: 0;
 	width: 300px;
 	height: calc(100vh - 120px);
-	background: #1c1d22;
+	background: #ffffff;
 }
 
 .menu__wrap {
@@ -91,7 +90,8 @@
 	position: relative;
 	display: block;
 	padding: 1em 2.5em 1em 1.5em;
-	color: #bdbdbd;
+	/* color: #bdbdbd; */
+	color: black;
 	-webkit-transition: color 0.1s;
 	transition: color 0.1s;
 }
@@ -318,7 +318,7 @@
 	top: 1em;
 	left: 1em;
 	display: none;
-	color: #fff;
+	color: black;
 	position: fixed;
 	z-index: 1000;
 }
