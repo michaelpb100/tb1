@@ -43,7 +43,7 @@
 
 .menu {
 	position: fixed;
-	top: 120px;
+	top: 150px;
 	left: 0;
 	width: 300px;
 	height: calc(100vh - 120px);
@@ -56,6 +56,17 @@
 	bottom: 0;
 	overflow: hidden;
 	width: 100%;
+}
+
+.contactBar{
+	/* background-color: #2C2C2C; */
+	background-color: #3b3d4a;
+	width: 100%;
+	z-index: 30;
+	text-align: center;
+	color: blanchedalmond;
+	padding-top: 5px;
+	padding-bottom: 5px;
 }
 
 .menu__level {
@@ -315,7 +326,7 @@
 
 .action--open {
 	font-size: 1.5em;
-	top: 1em;
+	top: 1.7em;
 	left: 1em;
 	display: none;
 	color: black;
