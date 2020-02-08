@@ -8,6 +8,12 @@
 	src: url('../fonts/feather/feather.eot?1gafuo#iefix') format('embedded-opentype'), url('../fonts/feather/feather.woff2?1gafuo') format('woff2'), url('../fonts/feather/feather.ttf?1gafuo') format('truetype'), url('../fonts/feather/feather.woff?1gafuo') format('woff'), url('../fonts/feather/feather.svg?1gafuo#feather') format('svg');
 }
 
+.clickable:active {
+	/* background-color: #0000FF; */
+	opacity: .5;
+  }
+
+
 .icon {
 	font-family: 'feather';
 	font-weight: normal;
