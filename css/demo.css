@@ -331,6 +331,10 @@ a:hover {
 	margin-left: 20px;
 }
 
+.rounded{
+	border-radius: 10px;
+}
+
 .bulletLess a{
 	margin-left: 10px;
 	color: var(--text-font-color);
